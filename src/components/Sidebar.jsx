@@ -6,6 +6,7 @@ import {
   Info,
   CreditCard,
   Briefcase,
+  Folder,
   LayoutGrid,
   Users,
   Settings,
@@ -19,13 +20,14 @@ const Sidebar = () => {
   const { pathname } = useLocation();
 
   const menu = [
+    { name: "Dashboard", path: "", icon: LayoutGrid }, 
     { name: "Category", path: "category", icon: Layers },
     { name: "Event", path: "event", icon: Calendar },
     { name: "Banner", path: "banner", icon: Image },
     { name: "About", path: "about", icon: Info },
     { name: "Card", path: "card", icon: CreditCard },
     { name: "Service", path: "service", icon: Briefcase },
-    { name: "Portfolio", path: "portfolio", icon: LayoutGrid },
+    { name: "Portfolio", path: "portfolio", icon: Folder },
     { name: "Team", path: "team", icon: Users },
     { name: "Process", path: "process", icon: Settings },
     { name: "Price", path: "price", icon: DollarSign },
@@ -36,6 +38,7 @@ const Sidebar = () => {
   ];
 
   const isActive = (module) => {
+    if (module === "") return pathname === "/";
     return (
       pathname === `/${module}` ||
       pathname.startsWith(`/create-${module}`) ||
