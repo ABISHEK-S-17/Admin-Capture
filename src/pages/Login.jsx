@@ -103,12 +103,12 @@ const Login = () => {
           </form>
 
           {/* Register Link */}
-          <p className="mt-4 text-center text-sm">
+          {/* <p className="mt-4 text-center text-sm">
             Don’t have an account?{" "}
             <Link to="/register" className="underline text-blue-600 hover:text-blue-800">
               Register
             </Link>
-          </p>
+          </p> */}
         </div>
       </div>
     </>

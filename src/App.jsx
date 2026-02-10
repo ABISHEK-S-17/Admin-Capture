@@ -6,7 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import Banner from "./pages/Banner";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
+// import Register from "./pages/Register";
 import CreateBanner from "./pages/CreateBanner";
 import EditBanner from "./pages/EditBanner";
 import Category from "./pages/Category";
@@ -68,7 +68,7 @@ function App() {
 
   {/* 🌐 Public Routes */}
   <Route path="/login" element={<Login />} />
-  <Route path="/register" element={<Register />} />
+  {/* <Route path="/register" element={<Register />} /> */}
 
   {/* 🔒 Protected Routes */}
   <Route element={<ProtectedRoute />}>
